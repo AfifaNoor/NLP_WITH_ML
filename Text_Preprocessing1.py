@@ -71,7 +71,14 @@ for i in range(len(sentences)):
     review = ' '.join(review)  # rejoin words to form the cleaned sentence
     corpus.append(review)
 
+#TF-IDF
+from sklearn.feature_extraction.text import TfidfTransformer
+cv=TfidfTransformer(ngram_range=(1,1))
+x=cv.fit_transform(corpus)
 
+corpus[0]
+
+x[0].toarray()
 
 
 
