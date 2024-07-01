@@ -73,12 +73,15 @@ for i in range(len(sentences)):
 
 #TF-IDF
 from sklearn.feature_extraction.text import TfidfTransformer
-cv=TfidfTransformer(ngram_range=(1,1))
+cv=TfidfTransformer(ngram_range=(1,1),max_feature=10) ##max range = 3 means that words which is present more than 3 in the corpus shpuld return in output too 
 x=cv.fit_transform(corpus)
 
 corpus[0]
 
 x[0].toarray()
+
+
+
 
 
 
